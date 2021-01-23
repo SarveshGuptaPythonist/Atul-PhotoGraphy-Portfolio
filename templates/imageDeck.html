@@ -1,0 +1,14 @@
+<div class="card-columns mt-3 mr-5">
+    {% for i in images %}
+    <div class="card" style="">
+
+        <img class="card-img-top img-fluid" src="/media/{{i.image}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ i.title }}</h5>
+            <p class="card-text">{{i.desc}}</p>
+            <a href='#' class="btn btn-primary" onclick="showModalwithImage('{{i.image}}')">View</a>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
