@@ -14,7 +14,7 @@ def showPage(request):
 
 
 def showCatPage(request,cid):
-    images = Image.objects.all()
+    images = Image.objects.all()[::-1]
     cats = Category.objects.all()
     print(cid)
     category = Category.objects.get(pk=cid)
